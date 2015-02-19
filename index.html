@@ -2,16 +2,37 @@
 	<html lang="end">
 	<head>
 		<title>Wazoku Cards</title>
-		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="less/style.less">
-		<!-- <script src="js/bootstrap.min.js"></script> -->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet/less" type="text/css" href="less/style.less">]<!-- set options before less.js script -->
+		<script>
+		  less = {
+		    env: "development",
+		    async: false,
+		    fileAsync: false,
+		    poll: 1000,
+		    functions: {},
+		    dumpLineNumbers: "comments",
+		    relativeUrls: false,
+		    rootpath: ":/a.com/"
+		  };
+		</script>
+		<script src="js/less.min.js" type="text/javascript"></script>
 	</head>
 	<body>
 		<section>
 			<article>
+				<header>
+					<h1>Title of the cards</h1>
+				</header>
 				<figure>
-
+					<img src="" alt="">
 				</figure>
+				<section>
+					
+				</section>
+				<nav>
+					
+				</nav>
 			</article>
 		</section>
 	</body>
