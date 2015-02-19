@@ -1,23 +1,26 @@
-@primary-colour: mix(black, cyan, 30%);
+@primary-colour: mix(black, purple, 5%);
+@dark-colour: #111;
+@light-colour: #E3E3E3;
+@background-colour: #999;
+@shadow-colour: #111;
 
 * {
 	transition: all 0.8s ease-in-out;
 }
 
 body {
-	background: #ccc;
+	background: @background-colour;
 }
 
 section.main {
 	color: white;
 	> article {
-		background: black;
 		float: left;
 		width: 18%;
 		margin: 1%;
 		min-width: 150px;
 		overflow: hidden;
-		box-shadow: 0px 2px 5px 1px #888;
+		box-shadow: 0px 2px 5px 1px @shadow-colour;
 		> header a {
 			display: block;
 			padding: 0.5em;
@@ -31,6 +34,21 @@ section.main {
 			&:hover {
 				background: darken(@primary-colour, 10%);
 			}
+		}
+		> div.indicator {
+			width: 1em;
+			height: 1em;
+			display: block;
+			position: relative;
+			top: -1.5em;
+			left: 91%;
+			margin-bottom: -1.2em;
+			text-align: center;
+			border-radius: 50%;
+			background: @light-colour;
+			color: @dark-colour;
+			cursor: pointer;
+			padding: 0.1em;
 		}
 		> figure {
 			display: block;
@@ -48,12 +66,12 @@ section.main {
 		}
 		> section {
 			margin: 0;
-			background: #111;
+			background: @light-colour;
+			color: black;
 			position: relative;
 			z-index: 11;
 			width: 100%;
 			display: block;
-			background: #111;
 			//top: 5em;
 			height: 10em;
 			margin-bottom: -10em;
@@ -68,11 +86,12 @@ section.main {
 				position: relative;
 				top: -0.9em;
 				padding: 0.1em;
+				border-radius: 50%;
 				color: white;
 				font-weight: 300;
 				text-decoration: none;
 				margin: 0 auto;
-				box-shadow: 0 0 3px 1px #111;
+				outline: 0;
 			}
 			> div.top, > div.bottom {
 				height: 3em;
@@ -84,7 +103,7 @@ section.main {
 					display: table-row;
 					margin: 0;
 					padding: 0;
-					list-style: none;
+					width: 100%;
 					li {
 						display: table-cell;
 					}
@@ -93,7 +112,10 @@ section.main {
 		}
 		> section.show-full {
 			top: -10em;
-			box-shadow: 0 0 53px 1px #111;
+			box-shadow: 0 0 53px 30px #111;
+			a.pull-up {
+				transform: rotate(180deg);
+			}
 		}
 		> nav {
 			width: 100%;
