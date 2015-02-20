@@ -3,6 +3,8 @@
 @light-colour: #E3E3E3;
 @background-colour: #999;
 @shadow-colour: #111;
+@light-text: #999;
+@dark-text: #111;
 
 * {
 	transition: all 0.8s ease-in-out;
@@ -21,34 +23,43 @@ section.main {
 		min-width: 150px;
 		overflow: hidden;
 		box-shadow: 0px 2px 5px 1px @shadow-colour;
-		> header a {
-			display: block;
-			padding: 0.5em;
-			font-style: 1.5em;
-			text-decoration: none;
-			background: @primary-colour;
-			color: white;
-			text-transform: uppercase;
-			font-size: 0.8em;
-			white-space: nowrap;
-			&:hover {
-				background: darken(@primary-colour, 10%);
+		> header {
+			a {
+				display: inline-block;
+				padding: 0.5em;
+				height: 1em;
+				line-height: 1em;
+				text-size: 0.35em;
+				text-decoration: none;
+				background: @primary-colour;
+				color: white;
+				text-transform: uppercase;
+				font-size: 0.65em;
+				white-space: nowrap;
+				z-index: 9999;
+				&:hover {
+					background: darken(@primary-colour, 10%);
+				}
 			}
-		}
-		> div.indicator {
-			width: 1em;
-			height: 1em;
-			display: block;
-			position: relative;
-			top: -1.5em;
-			left: 91%;
-			margin-bottom: -1.2em;
-			text-align: center;
-			border-radius: 50%;
-			background: @light-colour;
-			color: @dark-colour;
-			cursor: pointer;
-			padding: 0.1em;
+			div {
+				display: inline-block;
+				width: 1em;
+				height: 1em;
+				background: white;
+				// width: 1em;
+				// height: 1em;
+				// display: block;
+				// position: relative;
+				// top: -1.5em;
+				// left: 91%;
+				// margin-bottom: -1.2em;
+				// text-align: center;
+				// border-radius: 50%;
+				// background: @light-colour;
+				// color: @dark-colour;
+				// cursor: pointer;
+				// padding: 0.1em;
+			}
 		}
 		> figure {
 			display: block;
