@@ -27,7 +27,7 @@
 					<a href="#">The Card Title</a>
 					<div class="indicator">?</div>
 				</header>
-				<figure>
+				<figure class="push-down">
 				</figure>
 				<section>
 					<a class="pull-up" href="#">^</a>
@@ -67,12 +67,14 @@
 		}
 		$(".pull-up").click(function(){
 		    var self = $(this).parent();
-		    var figure = $(this).closest("figure");
 		    self.toggleClass("show-full");
-		    figure.css("opacity: 0.8");
-
+		    // self.prev("figure").css("opacity", "0.5");
+		});
+		$(".push-down").click(function(){
+			var next = $(this).next(".show-full");
+			next.removeClass("show-full"); 
 		});
 	});
 	</script>
 	
-</html>
+</html> 
